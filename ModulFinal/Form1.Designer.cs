@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.toolStripContainer2 = new System.Windows.Forms.ToolStripContainer();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.labelOutput4 = new System.Windows.Forms.Label();
             this.labelOutput3 = new System.Windows.Forms.Label();
             this.labelOutput2 = new System.Windows.Forms.Label();
-            this.labelOuput1 = new System.Windows.Forms.Label();
+            this.labelOutput1 = new System.Windows.Forms.Label();
             this.pictureBoxOutput4 = new System.Windows.Forms.PictureBox();
             this.pictureBoxOutput2 = new System.Windows.Forms.PictureBox();
             this.pictureBoxOutput3 = new System.Windows.Forms.PictureBox();
@@ -140,7 +140,7 @@
             this.groupBox2.Controls.Add(this.labelOutput4);
             this.groupBox2.Controls.Add(this.labelOutput3);
             this.groupBox2.Controls.Add(this.labelOutput2);
-            this.groupBox2.Controls.Add(this.labelOuput1);
+            this.groupBox2.Controls.Add(this.labelOutput1);
             this.groupBox2.Controls.Add(this.pictureBoxOutput4);
             this.groupBox2.Controls.Add(this.pictureBoxOutput2);
             this.groupBox2.Controls.Add(this.pictureBoxOutput3);
@@ -179,20 +179,21 @@
             this.labelOutput2.TabIndex = 6;
             this.labelOutput2.Text = "label2";
             // 
-            // labelOuput1
+            // labelOutput1
             // 
-            this.labelOuput1.AutoSize = true;
-            this.labelOuput1.Location = new System.Drawing.Point(129, 168);
-            this.labelOuput1.Name = "labelOuput1";
-            this.labelOuput1.Size = new System.Drawing.Size(35, 13);
-            this.labelOuput1.TabIndex = 5;
-            this.labelOuput1.Text = "label1";
+            this.labelOutput1.AutoSize = true;
+            this.labelOutput1.Location = new System.Drawing.Point(129, 168);
+            this.labelOutput1.Name = "labelOutput1";
+            this.labelOutput1.Size = new System.Drawing.Size(35, 13);
+            this.labelOutput1.TabIndex = 5;
+            this.labelOutput1.Text = "label1";
             // 
             // pictureBoxOutput4
             // 
             this.pictureBoxOutput4.Location = new System.Drawing.Point(296, 200);
             this.pictureBoxOutput4.Name = "pictureBoxOutput4";
             this.pictureBoxOutput4.Size = new System.Drawing.Size(269, 147);
+            this.pictureBoxOutput4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxOutput4.TabIndex = 4;
             this.pictureBoxOutput4.TabStop = false;
             // 
@@ -201,6 +202,7 @@
             this.pictureBoxOutput2.Location = new System.Drawing.Point(296, 19);
             this.pictureBoxOutput2.Name = "pictureBoxOutput2";
             this.pictureBoxOutput2.Size = new System.Drawing.Size(269, 147);
+            this.pictureBoxOutput2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxOutput2.TabIndex = 3;
             this.pictureBoxOutput2.TabStop = false;
             // 
@@ -209,6 +211,7 @@
             this.pictureBoxOutput3.Location = new System.Drawing.Point(15, 200);
             this.pictureBoxOutput3.Name = "pictureBoxOutput3";
             this.pictureBoxOutput3.Size = new System.Drawing.Size(269, 147);
+            this.pictureBoxOutput3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxOutput3.TabIndex = 2;
             this.pictureBoxOutput3.TabStop = false;
             // 
@@ -217,6 +220,7 @@
             this.pictureBoxOutput1.Location = new System.Drawing.Point(15, 19);
             this.pictureBoxOutput1.Name = "pictureBoxOutput1";
             this.pictureBoxOutput1.Size = new System.Drawing.Size(269, 147);
+            this.pictureBoxOutput1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxOutput1.TabIndex = 1;
             this.pictureBoxOutput1.TabStop = false;
             // 
@@ -233,14 +237,14 @@
             // 
             // chartHistogram
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chartHistogram.ChartAreas.Add(chartArea1);
+            chartArea2.Name = "ChartArea1";
+            this.chartHistogram.ChartAreas.Add(chartArea2);
             this.chartHistogram.Location = new System.Drawing.Point(355, 19);
             this.chartHistogram.Margin = new System.Windows.Forms.Padding(0);
             this.chartHistogram.Name = "chartHistogram";
-            series1.ChartArea = "ChartArea1";
-            series1.Name = "Series1";
-            this.chartHistogram.Series.Add(series1);
+            series2.ChartArea = "ChartArea1";
+            series2.Name = "Series1";
+            this.chartHistogram.Series.Add(series2);
             this.chartHistogram.Size = new System.Drawing.Size(206, 115);
             this.chartHistogram.TabIndex = 1;
             this.chartHistogram.Text = "chart1";
@@ -405,20 +409,22 @@
             this.btnFlipVertikal,
             this.btnFlipHorizontal});
             this.flipToolStripMenuItem.Name = "flipToolStripMenuItem";
-            this.flipToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
+            this.flipToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.flipToolStripMenuItem.Text = "Flip";
             // 
             // btnFlipVertikal
             // 
             this.btnFlipVertikal.Name = "btnFlipVertikal";
-            this.btnFlipVertikal.Size = new System.Drawing.Size(129, 22);
+            this.btnFlipVertikal.Size = new System.Drawing.Size(152, 22);
             this.btnFlipVertikal.Text = "Vertikal";
+            this.btnFlipVertikal.Click += new System.EventHandler(this.btnFlipVertikal_Click);
             // 
             // btnFlipHorizontal
             // 
             this.btnFlipHorizontal.Name = "btnFlipHorizontal";
-            this.btnFlipHorizontal.Size = new System.Drawing.Size(129, 22);
+            this.btnFlipHorizontal.Size = new System.Drawing.Size(152, 22);
             this.btnFlipHorizontal.Text = "Horizontal";
+            this.btnFlipHorizontal.Click += new System.EventHandler(this.btnFlipHorizontal_Click);
             // 
             // rotateToolStripMenuItem
             // 
@@ -426,7 +432,7 @@
             this.btnRotateClockwise,
             this.btnRotateCounterClockwise});
             this.rotateToolStripMenuItem.Name = "rotateToolStripMenuItem";
-            this.rotateToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
+            this.rotateToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.rotateToolStripMenuItem.Text = "Rotate";
             // 
             // btnRotateClockwise
@@ -795,7 +801,7 @@
         private System.Windows.Forms.Label labelOutput4;
         private System.Windows.Forms.Label labelOutput3;
         private System.Windows.Forms.Label labelOutput2;
-        private System.Windows.Forms.Label labelOuput1;
+        private System.Windows.Forms.Label labelOutput1;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartHistogram;
     }
 }

@@ -7,3 +7,12 @@ D:\Kuliah\Semester 6\Pengolahan Citra\Praktikum Modul Final\ModulFinal\ModulFina
 D:\Kuliah\Semester 6\Pengolahan Citra\Praktikum Modul Final\ModulFinal\ModulFinal\obj\Debug\ModulFinal.csproj.GenerateResource.Cache
 D:\Kuliah\Semester 6\Pengolahan Citra\Praktikum Modul Final\ModulFinal\ModulFinal\obj\Debug\ModulFinal.exe
 D:\Kuliah\Semester 6\Pengolahan Citra\Praktikum Modul Final\ModulFinal\ModulFinal\obj\Debug\ModulFinal.pdb
+D:\Kuliah\Semester 6\Pengolahan Citra\Praktikum Modul Final\ModulFinal\bin\Debug\ModulFinal.exe.config
+D:\Kuliah\Semester 6\Pengolahan Citra\Praktikum Modul Final\ModulFinal\bin\Debug\ModulFinal.exe
+D:\Kuliah\Semester 6\Pengolahan Citra\Praktikum Modul Final\ModulFinal\bin\Debug\ModulFinal.pdb
+D:\Kuliah\Semester 6\Pengolahan Citra\Praktikum Modul Final\ModulFinal\obj\Debug\ModulFinal.csprojResolveAssemblyReference.cache
+D:\Kuliah\Semester 6\Pengolahan Citra\Praktikum Modul Final\ModulFinal\obj\Debug\ModulFinal.Form1.resources
+D:\Kuliah\Semester 6\Pengolahan Citra\Praktikum Modul Final\ModulFinal\obj\Debug\ModulFinal.Properties.Resources.resources
+D:\Kuliah\Semester 6\Pengolahan Citra\Praktikum Modul Final\ModulFinal\obj\Debug\ModulFinal.csproj.GenerateResource.Cache
+D:\Kuliah\Semester 6\Pengolahan Citra\Praktikum Modul Final\ModulFinal\obj\Debug\ModulFinal.exe
+D:\Kuliah\Semester 6\Pengolahan Citra\Praktikum Modul Final\ModulFinal\obj\Debug\ModulFinal.pdb

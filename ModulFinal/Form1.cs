@@ -64,5 +64,36 @@ namespace ModulFinal
                 }
             }
         }
+
+        private void btnFlipHorizontal_Click(object sender, EventArgs e)
+        {
+            objBitmapOutput1 = new Bitmap(objBitmapInput);
+            for (int x = 0; x < objBitmapInput.Width; x++)
+            {
+                for(int y = 0; y< objBitmapInput.Height; y++)
+                {
+                    Color w = objBitmapInput.GetPixel(x, y);
+                    objBitmapOutput1.SetPixel(objBitmapInput.Width - 1 - x, y, w);
+                }
+            }
+            pictureBoxOutput1.Image = objBitmapOutput1;
+            labelOutput1.Text = "Flip Horizontal";
+
+        }
+
+        private void btnFlipVertikal_Click(object sender, EventArgs e)
+        {
+            objBitmapOutput1 = new Bitmap(objBitmapInput);
+            for (int x = 0; x < objBitmapInput.Width; x++)
+            {
+                for (int y = 0; y < objBitmapInput.Height; y++)
+                {
+                    Color w = objBitmapInput.GetPixel(x, y);
+                    objBitmapOutput1.SetPixel(x,objBitmapInput.Height - 1 - y, w);
+                }
+            }
+            pictureBoxOutput1.Image = objBitmapOutput1;
+            labelOutput1.Text = "Flip Vertikal";
+        }
     }
 }
