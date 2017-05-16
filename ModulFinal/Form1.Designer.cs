@@ -29,11 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.toolStripContainer2 = new System.Windows.Forms.ToolStripContainer();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnSwap = new System.Windows.Forms.Button();
             this.labelOutput4 = new System.Windows.Forms.Label();
             this.labelOutput3 = new System.Windows.Forms.Label();
             this.labelOutput2 = new System.Windows.Forms.Label();
@@ -51,9 +52,6 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripModeWarna = new System.Windows.Forms.ToolStripSplitButton();
             this.menu1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnModeRGB = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnModeHSV = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnModeCMYK = new System.Windows.Forms.ToolStripMenuItem();
             this.btnModeGrayscale = new System.Windows.Forms.ToolStripMenuItem();
             this.btnModeBW = new System.Windows.Forms.ToolStripMenuItem();
             this.filterLayerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -71,7 +69,6 @@
             this.btnZoomOut = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.textBoxBrightness = new System.Windows.Forms.ToolStripTextBox();
             this.btnBrightness = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
@@ -102,7 +99,7 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.btnSwap = new System.Windows.Forms.Button();
+            this.textBoxBrightness = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripContainer2.ContentPanel.SuspendLayout();
             this.toolStripContainer2.TopToolStripPanel.SuspendLayout();
             this.toolStripContainer2.SuspendLayout();
@@ -153,6 +150,16 @@
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Citra Output";
+            // 
+            // btnSwap
+            // 
+            this.btnSwap.Location = new System.Drawing.Point(224, 168);
+            this.btnSwap.Name = "btnSwap";
+            this.btnSwap.Size = new System.Drawing.Size(60, 23);
+            this.btnSwap.TabIndex = 9;
+            this.btnSwap.Text = "Swap";
+            this.btnSwap.UseVisualStyleBackColor = true;
+            this.btnSwap.Click += new System.EventHandler(this.btnSwap_Click);
             // 
             // labelOutput4
             // 
@@ -243,14 +250,14 @@
             // 
             // chartHistogram
             // 
-            chartArea6.Name = "ChartArea1";
-            this.chartHistogram.ChartAreas.Add(chartArea6);
+            chartArea2.Name = "ChartArea1";
+            this.chartHistogram.ChartAreas.Add(chartArea2);
             this.chartHistogram.Location = new System.Drawing.Point(355, 19);
             this.chartHistogram.Margin = new System.Windows.Forms.Padding(0);
             this.chartHistogram.Name = "chartHistogram";
-            series6.ChartArea = "ChartArea1";
-            series6.Name = "Series1";
-            this.chartHistogram.Series.Add(series6);
+            series2.ChartArea = "ChartArea1";
+            series2.Name = "Series1";
+            this.chartHistogram.Series.Add(series2);
             this.chartHistogram.Size = new System.Drawing.Size(206, 115);
             this.chartHistogram.TabIndex = 1;
             this.chartHistogram.Text = "chart1";
@@ -293,7 +300,7 @@
             this.toolStripToolsLainnya});
             this.toolStrip2.Location = new System.Drawing.Point(3, 0);
             this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(1176, 25);
+            this.toolStrip2.Size = new System.Drawing.Size(1207, 25);
             this.toolStrip2.TabIndex = 0;
             // 
             // btnLoad
@@ -337,32 +344,11 @@
             // menu1ToolStripMenuItem
             // 
             this.menu1ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnModeRGB,
-            this.btnModeHSV,
-            this.btnModeCMYK,
             this.btnModeGrayscale,
             this.btnModeBW});
             this.menu1ToolStripMenuItem.Name = "menu1ToolStripMenuItem";
-            this.menu1ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.menu1ToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.menu1ToolStripMenuItem.Text = "Mode Warna";
-            // 
-            // btnModeRGB
-            // 
-            this.btnModeRGB.Name = "btnModeRGB";
-            this.btnModeRGB.Size = new System.Drawing.Size(161, 22);
-            this.btnModeRGB.Text = "RGB";
-            // 
-            // btnModeHSV
-            // 
-            this.btnModeHSV.Name = "btnModeHSV";
-            this.btnModeHSV.Size = new System.Drawing.Size(161, 22);
-            this.btnModeHSV.Text = "HSV";
-            // 
-            // btnModeCMYK
-            // 
-            this.btnModeCMYK.Name = "btnModeCMYK";
-            this.btnModeCMYK.Size = new System.Drawing.Size(161, 22);
-            this.btnModeCMYK.Text = "CMYK";
             // 
             // btnModeGrayscale
             // 
@@ -384,20 +370,20 @@
             this.btnLayerRGB,
             this.btnLayerGrayscale});
             this.filterLayerToolStripMenuItem.Name = "filterLayerToolStripMenuItem";
-            this.filterLayerToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.filterLayerToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.filterLayerToolStripMenuItem.Text = "Filter Layer";
             // 
             // btnLayerRGB
             // 
             this.btnLayerRGB.Name = "btnLayerRGB";
-            this.btnLayerRGB.Size = new System.Drawing.Size(152, 22);
+            this.btnLayerRGB.Size = new System.Drawing.Size(124, 22);
             this.btnLayerRGB.Text = "RGB";
             this.btnLayerRGB.Click += new System.EventHandler(this.btnLayerRGB_Click);
             // 
             // btnLayerGrayscale
             // 
             this.btnLayerGrayscale.Name = "btnLayerGrayscale";
-            this.btnLayerGrayscale.Size = new System.Drawing.Size(152, 22);
+            this.btnLayerGrayscale.Size = new System.Drawing.Size(124, 22);
             this.btnLayerGrayscale.Text = "Grayscale";
             this.btnLayerGrayscale.Click += new System.EventHandler(this.btnLayerGrayscale_Click);
             // 
@@ -419,20 +405,20 @@
             this.btnFlipVertikal,
             this.btnFlipHorizontal});
             this.flipToolStripMenuItem.Name = "flipToolStripMenuItem";
-            this.flipToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.flipToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
             this.flipToolStripMenuItem.Text = "Flip";
             // 
             // btnFlipVertikal
             // 
             this.btnFlipVertikal.Name = "btnFlipVertikal";
-            this.btnFlipVertikal.Size = new System.Drawing.Size(152, 22);
+            this.btnFlipVertikal.Size = new System.Drawing.Size(129, 22);
             this.btnFlipVertikal.Text = "Vertikal";
             this.btnFlipVertikal.Click += new System.EventHandler(this.btnFlipVertikal_Click);
             // 
             // btnFlipHorizontal
             // 
             this.btnFlipHorizontal.Name = "btnFlipHorizontal";
-            this.btnFlipHorizontal.Size = new System.Drawing.Size(152, 22);
+            this.btnFlipHorizontal.Size = new System.Drawing.Size(129, 22);
             this.btnFlipHorizontal.Text = "Horizontal";
             this.btnFlipHorizontal.Click += new System.EventHandler(this.btnFlipHorizontal_Click);
             // 
@@ -442,7 +428,7 @@
             this.btnRotateClockwise,
             this.btnRotateCounterClockwise});
             this.rotateToolStripMenuItem.Name = "rotateToolStripMenuItem";
-            this.rotateToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.rotateToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
             this.rotateToolStripMenuItem.Text = "Rotate";
             // 
             // btnRotateClockwise
@@ -492,11 +478,6 @@
             this.toolStripLabel1.Size = new System.Drawing.Size(78, 22);
             this.toolStripLabel1.Text = "Brightness";
             // 
-            // textBoxBrightness
-            // 
-            this.textBoxBrightness.Name = "textBoxBrightness";
-            this.textBoxBrightness.Size = new System.Drawing.Size(100, 25);
-            // 
             // btnBrightness
             // 
             this.btnBrightness.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -505,6 +486,7 @@
             this.btnBrightness.Name = "btnBrightness";
             this.btnBrightness.Size = new System.Drawing.Size(23, 22);
             this.btnBrightness.Text = "toolStripButton10";
+            this.btnBrightness.Click += new System.EventHandler(this.btnBrightness_Click);
             // 
             // toolStripSeparator4
             // 
@@ -531,6 +513,7 @@
             this.btnContrast.Name = "btnContrast";
             this.btnContrast.Size = new System.Drawing.Size(23, 22);
             this.btnContrast.Text = "toolStripButton11";
+            this.btnContrast.Click += new System.EventHandler(this.btnContrast_Click);
             // 
             // toolStripSeparator5
             // 
@@ -627,35 +610,35 @@
             // btnKuantisasiCitra8
             // 
             this.btnKuantisasiCitra8.Name = "btnKuantisasiCitra8";
-            this.btnKuantisasiCitra8.Size = new System.Drawing.Size(152, 22);
+            this.btnKuantisasiCitra8.Size = new System.Drawing.Size(109, 22);
             this.btnKuantisasiCitra8.Text = "KC 8";
             this.btnKuantisasiCitra8.Click += new System.EventHandler(this.btnKuantisasiCitra8_Click);
             // 
             // btnKuantisasiCitra16
             // 
             this.btnKuantisasiCitra16.Name = "btnKuantisasiCitra16";
-            this.btnKuantisasiCitra16.Size = new System.Drawing.Size(152, 22);
+            this.btnKuantisasiCitra16.Size = new System.Drawing.Size(109, 22);
             this.btnKuantisasiCitra16.Text = "KC 16";
             this.btnKuantisasiCitra16.Click += new System.EventHandler(this.btnKuantisasiCitra16_Click);
             // 
             // btnKuantisasiCitra32
             // 
             this.btnKuantisasiCitra32.Name = "btnKuantisasiCitra32";
-            this.btnKuantisasiCitra32.Size = new System.Drawing.Size(152, 22);
+            this.btnKuantisasiCitra32.Size = new System.Drawing.Size(109, 22);
             this.btnKuantisasiCitra32.Text = "KC 32";
             this.btnKuantisasiCitra32.Click += new System.EventHandler(this.btnKuantisasiCitra32_Click);
             // 
             // btnKuantisasiCitra64
             // 
             this.btnKuantisasiCitra64.Name = "btnKuantisasiCitra64";
-            this.btnKuantisasiCitra64.Size = new System.Drawing.Size(152, 22);
+            this.btnKuantisasiCitra64.Size = new System.Drawing.Size(109, 22);
             this.btnKuantisasiCitra64.Text = "KC 64";
             this.btnKuantisasiCitra64.Click += new System.EventHandler(this.btnKuantisasiCitra64_Click);
             // 
             // btnKuantisasiCitra128
             // 
             this.btnKuantisasiCitra128.Name = "btnKuantisasiCitra128";
-            this.btnKuantisasiCitra128.Size = new System.Drawing.Size(152, 22);
+            this.btnKuantisasiCitra128.Size = new System.Drawing.Size(109, 22);
             this.btnKuantisasiCitra128.Text = "KC 128";
             this.btnKuantisasiCitra128.Click += new System.EventHandler(this.btnKuantisasiCitra128_Click);
             // 
@@ -676,25 +659,25 @@
             // btnCDF
             // 
             this.btnCDF.Name = "btnCDF";
-            this.btnCDF.Size = new System.Drawing.Size(152, 22);
+            this.btnCDF.Size = new System.Drawing.Size(134, 22);
             this.btnCDF.Text = "CDF";
             // 
             // btnSharpening
             // 
             this.btnSharpening.Name = "btnSharpening";
-            this.btnSharpening.Size = new System.Drawing.Size(152, 22);
+            this.btnSharpening.Size = new System.Drawing.Size(134, 22);
             this.btnSharpening.Text = "Sharpening";
             // 
             // btnInvers
             // 
             this.btnInvers.Name = "btnInvers";
-            this.btnInvers.Size = new System.Drawing.Size(152, 22);
+            this.btnInvers.Size = new System.Drawing.Size(134, 22);
             this.btnInvers.Text = "Invers";
             // 
             // btnAutoLevel
             // 
             this.btnAutoLevel.Name = "btnAutoLevel";
-            this.btnAutoLevel.Size = new System.Drawing.Size(152, 22);
+            this.btnAutoLevel.Size = new System.Drawing.Size(134, 22);
             this.btnAutoLevel.Text = "Auto Level";
             // 
             // contextMenuStrip1
@@ -714,15 +697,10 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // btnSwap
+            // textBoxBrightness
             // 
-            this.btnSwap.Location = new System.Drawing.Point(224, 168);
-            this.btnSwap.Name = "btnSwap";
-            this.btnSwap.Size = new System.Drawing.Size(60, 23);
-            this.btnSwap.TabIndex = 9;
-            this.btnSwap.Text = "Swap";
-            this.btnSwap.UseVisualStyleBackColor = true;
-            this.btnSwap.Click += new System.EventHandler(this.btnSwap_Click);
+            this.textBoxBrightness.Name = "textBoxBrightness";
+            this.textBoxBrightness.Size = new System.Drawing.Size(100, 25);
             // 
             // Form1
             // 
@@ -767,9 +745,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripSplitButton toolStripModeWarna;
         private System.Windows.Forms.ToolStripMenuItem menu1ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem btnModeRGB;
-        private System.Windows.Forms.ToolStripMenuItem btnModeHSV;
-        private System.Windows.Forms.ToolStripMenuItem btnModeCMYK;
         private System.Windows.Forms.ToolStripMenuItem btnModeGrayscale;
         private System.Windows.Forms.ToolStripMenuItem btnModeBW;
         private System.Windows.Forms.ToolStripMenuItem filterLayerToolStripMenuItem;
@@ -786,7 +761,6 @@
         private System.Windows.Forms.ToolStripButton btnZoomOut;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
-        private System.Windows.Forms.ToolStripTextBox textBoxBrightness;
         private System.Windows.Forms.ToolStripButton btnBrightness;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripLabel toolStripLabel2;
@@ -829,6 +803,7 @@
         private System.Windows.Forms.Label labelOutput1;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartHistogram;
         private System.Windows.Forms.Button btnSwap;
+        private System.Windows.Forms.ToolStripTextBox textBoxBrightness;
     }
 }
 

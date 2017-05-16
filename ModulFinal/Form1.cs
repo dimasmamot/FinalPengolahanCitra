@@ -440,5 +440,91 @@ namespace ModulFinal
                 }
             pictureBoxInput.Image = objBitmapInput;
         }
+
+        private void btnBrightness_Click(object sender, EventArgs e)
+        {
+            flushImageObject();
+            objBitmapOutput1 = new Bitmap(objBitmapInput);
+            int a = Convert.ToInt16(textBoxBrightness.Text);
+
+            for(int x = 0; x < objBitmapInput.Width; x++)
+            {
+                for(int y = 0; y < objBitmapInput.Height; y++)
+                {
+                    Color w = objBitmapInput.GetPixel(x, y);
+                    int xr = w.R; int xrBaru = xr + a;
+                    int xg = w.G; int xgBaru = xg + a;
+                    int xb = w.B; int xbBaru = xg + a;
+
+                    if (xrBaru < 0) xrBaru = 0;
+                    if (xrBaru > 255) xrBaru = 255;
+
+                    if (xgBaru < 0) xgBaru = 0;
+                    if (xgBaru > 255) xgBaru = 255;
+
+                    if (xbBaru < 0) xbBaru = 0;
+                    if (xbBaru > 255) xbBaru = 255;
+
+                    Color wb = Color.FromArgb(xrBaru, xgBaru, xbBaru);
+                    objBitmapOutput1.SetPixel(x, y, wb);
+                }
+            }
+            pictureBoxOutput1.Image = objBitmapOutput1;
+            btnSwap.Enabled = true;
+            labelOutput1.Text = "Brightness + "+textBoxBrightness.Text;
+            objBitmapSwap = objBitmapOutput1;
+        }
+
+        private void btnContrast_Click(object sender, EventArgs e)
+        {
+            flushImageObject();
+            objBitmapOutput1 = new Bitmap(objBitmapInput);
+            float c = Convert.ToSingle(textBoxContrast.Text);
+
+            if (c < -100) c = -100;
+            if (c > 100) c = 100;
+
+            c = (100.0f + c) / 100.0f;
+
+            for(int x = 0; x < objBitmapInput.Width; x++)
+            {
+                for(int y = 0; y<objBitmapInput.Height; y++)
+                {
+                    Color w = objBitmapInput.GetPixel(x, y);
+
+                    float xr = w.R/255.0f;
+                    xr -= 0.5f;
+                    xr *= c;
+                    xr += 0.5f;
+                    xr *= 255;
+                    if (xr < 0) xr = 0;
+                    if (xr > 255) xr = 255;
+
+                    float xg = w.G/255.0f;
+                    xg -= 0.5f;
+                    xg *= c;
+                    xg += 0.5f;
+                    xg *= 255;
+                    if (xg < 0) xg = 0;
+                    if (xg > 255) xg = 255;
+
+                    float xb = w.B/255.0f;
+                    xb -= 0.5f;
+                    xb *= c;
+                    xb += 0.5f;
+                    xb *= 255;
+                    if (xb < 0) xb = 0;
+                    if (xb > 255) xb = 255;
+
+                    Color wb = Color.FromArgb((byte)xr, (byte)xg, (byte)xb);
+                    objBitmapOutput1.SetPixel(x, y, wb);
+                }
+            }
+
+            pictureBoxOutput1.Image = objBitmapOutput1;
+            btnSwap.Enabled = true;
+            labelOutput1.Text = "Contrast + " + textBoxContrast.Text;
+            objBitmapSwap = objBitmapOutput1;
+        }
     }
 }
